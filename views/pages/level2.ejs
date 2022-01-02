@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>BACKSLASH</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="assets/css/Material-Inputs-1.css">
+    <link rel="stylesheet" href="assets/css/Material-Inputs-2.css">
+    <link rel="stylesheet" href="assets/css/Material-Inputs-3.css">
+    <link rel="stylesheet" href="assets/css/Material-Inputs-4.css">
+    <link rel="stylesheet" href="assets/css/Material-Inputs.css">
+    <link rel="stylesheet" href="assets/css/MUSA_input-helper-1.css">
+    <link rel="stylesheet" href="assets/css/MUSA_input-helper.css">
+    <link rel="icon" type="image/png" href="assets/img/Backslash.png">
+</head>
+
+<body id="home"><a class="menu-toggle rounded" href="#"><i class="fa fa-bars"></i></a>
+    <nav class="navbar navbar-light navbar-expand" id="sidebar-wrapper">
+        <div class="container">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav sidebar-nav" id="sidebar-nav" style="text-align: center;">
+                    <li class="nav-item sidebar-brand"><a class="nav-link active js-scroll-trigger"
+                            href="#home">BACKSLASH</a></li>
+                    <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="#guidelines">Input
+                            Format</a></li>
+                    <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger"
+                            href="#questions">Questions</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="d-flex masthead"
+        style="background-image: url('assets/img/bg-masthead.jpg');transform-origin: 492.5px 500px;">
+        <div class="container my-auto text-center"
+            style="margin: 0px 20.5px;margin-left: 20.5px;height: 224px;margin-right: 20.5px;">
+            <h1 class="mb-1">BACKSLASH</h1>
+            <h3 class="mb-5"><em>#REVERSE CODING</em></h3><a class="btn btn-primary btn-xl js-scroll-trigger"
+                role="button" href="#guidelines"
+                style="padding-right: 40px;margin-right: 20px;margin-top: 5px;margin-bottom: 5px;width: 184px;transform-origin: 92px 33px;">INPUT
+                FORMAT</a><a class="btn btn-primary btn-xl js-scroll-trigger" role="button" href="#questions"
+                style="margin-top: 5px;margin-bottom: 5px;margin-right: 20px;width: 184px;">QUESTIONS</a>
+        </div>
+    </header>
+    <section id="guidelines" class="content-section">
+        <div class="container">
+            <div class="content-section-heading text-center">
+                <h2 class="mb-5">INPUT FORMAT</h2>
+            </div>
+            <div class="row g-0">
+                <div class="col-lg-4" style="padding: 10px;"><a class="portfolio-item" href="#questions">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <h2 style="font-size: 20.8px;">QUESTION 1</h2>
+                                <p class="mb-0">A string of non-zero length</p>
+                            </div>
+                        </div><img class="img-fluid" src="assets/img/portfolio-1.jpg">
+                    </a></div>
+                <div class="col-lg-4" style="padding: 10px;"><a class="portfolio-item" href="#questions">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <h2 style="font-size: 20.8px;">QUESTION 2</h2>
+                                <p class="mb-0">An integer between 0 and 9&sup2 (inclusive)</p>
+                            </div>
+                        </div><img class="img-fluid" src="assets/img/portfolio-3.jpg">
+                    </a></div>
+                <div class="col-lg-4" style="padding: 10px;"><a class="portfolio-item" href="#questions">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <h2 style="font-size: 20.8px;">QUESTION 3</h2>
+                                <p class="mb-0">Any non zero integer</p>
+                            </div>
+                        </div><img class="img-fluid" src="assets/img/portfolio-4.jpg">
+                    </a></div>
+            </div>
+        </div>
+    </section>
+    <section id="questions" class="content-section bg-primary text-white">
+        <div class="content-section-heading text-center">
+            <h2 class="mb-5">QUESTIONS</h2>
+        </div>
+
+
+        <div>
+            <div class="row" style="margin: 2px;padding: 0px;">
+                <div class="col-md-4">
+                    <section class="card">
+                        <h1 style="text-align: center;color: var(--bs-red);">Question 1&nbsp;</h1>
+                        <form>
+                            <div class="md-input-group"><label class="form-label md-input-label"></label>
+                                <textarea id="Text" name="textarea" name="TextInput" placeholder="String input"
+                                    onfocus="clearfield()" ; class="form-control md-input"></TEXTAREA>
+                            </div>
+                            <div class="md-input-group"><label class="form-label md-input-label"
+                                    placeholder="Output"></label><input id="result" name="TextOutput" disabled
+                                    class="form-control md-input" type="text">
+                            </div>
+                            <br>
+                        </form><button class="btn btn-primary d-block md-btn w-100" type="button"
+                            style="background: rgb(30,153,49);border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;"
+                            onclick="reverse2()">GET RESULT</button><br>
+                        <button class="btn btn-primary d-block md-btn w-100" type="button"
+                            style="background: rgb(30,153,49);border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;"
+                            onclick="clearfield()">CLEAR</button>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <section class="card">
+                        <h1 style="text-align: center;color: var(--bs-red);">Question 2&nbsp;</h1>
+                        <form>
+                            <div class="md-input-group"><label class="form-label md-input-label"></label>
+                                <input type="text" id="Text1" placeholder="0 &le; N &le; 9&sup2;" ;
+                                    class="form-control md-input">
+                            </div>
+                            <div class="md-input-group"><label class="form-label md-input-label"></label><input
+                                    type="text" id="result1" disabled class="form-control md-input" id="result1"
+                                    type="text"></div><br>
+                        </form><button class="btn btn-primary d-block md-btn w-100" type="button"
+                            style="background: rgb(30,153,49);border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;"
+                            onclick="reverse1()">GET RESULT</button><br>
+                        <button class="btn btn-primary d-block md-btn w-100" type="button"
+                            style="background: rgb(30,153,49);border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;"
+                            onclick="clearfield1()">CLEAR</button>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <section class="card">
+                        <h1 style="text-align: center;color: var(--bs-red);">Question 3&nbsp;</h1>
+                        <form>
+                            <div class="md-input-group"><label class="form-label md-input-label"></label>
+                                <textarea id="Text3" name="textarea" name="TextInput" placeholder="Integer input"
+                                    onfocus="clearfield3()" ; class="form-control md-input"></TEXTAREA>
+                            </div>
+                            <div class="md-input-group"><label class="form-label md-input-label"></label><input
+                                    type="text" id="result3" disabled class="form-control md-input" id="result3"
+                                    type="text"></div><br>
+                        </form><button class="btn btn-primary d-block md-btn w-100" type="button"
+                            style="background: rgb(30,153,49);border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;"
+                            onclick="reverse3()">GET RESULT</button><br>
+                        <button class="btn btn-primary d-block md-btn w-100" type="button"
+                            style="background: rgb(30,153,49);border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;"
+                            onclick="clearfield3()">CLEAR</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <a class="btn btn-primary btn-xl js-scroll-trigger" role="button" href="https://www.codechef.com/CZIL2021"
+                target="_blank"
+                style="margin-left: 0px;margin-top: 5px;margin-bottom: 5px;margin-right: 20px;transform-origin: center;color: var(--bs-blue);background: var(--bs-white);border-radius: 20px;padding-left: 40px;">SUBMIT
+                CODE</a>
+        </div>
+    </section>
+    <footer class="footer text-center">
+        <div class="container">
+            <ul class="list-inline mb-5">
+                <li class="list-inline-item">&nbsp;<a class="link-light social-link rounded-circle" target="_blank"
+                        href="https://www.facebook.com/pages/category/Community/CodeChef-MACE-Chapter-102610531673255/"><i
+                            class="icon-social-facebook"></i></a></li>
+                <li class="list-inline-item">&nbsp;<a class="link-light social-link rounded-circle" target="_blank"
+                        href="https://www.instagram.com/codechef_mace_chapter/"><i
+                            class="icon-social-instagram"></i></a></li>
+                <li class="list-inline-item">&nbsp;<a class="link-light social-link rounded-circle" target="_blank"
+                        href="https://in.linkedin.com/company/codechefmacechapter"><i
+                            class="icon-social-linkedin"></i></a></li>
+            </ul>
+        </div><a class="js-scroll-trigger scroll-to-top rounded" href="#home"><i class="fa fa-angle-up"></i></a>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/stylish-portfolio.js"></script>
+    <script src="assets/js/Material-Inputs.js"></script>
+    <script src="assets/css/motion.js"></script>
+    <script src="assets/css/motion2.js"></script>
+    <script src="assets/css/motion3.js"></script>
+    <script src="assets/js/MUSA_input-helper.js"></script>
+</body>
+
+</html>
