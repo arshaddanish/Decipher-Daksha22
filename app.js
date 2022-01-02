@@ -6,7 +6,7 @@ app.set("view engine", "ejs");
 
 app.use(express.static("public"));
 
-app.get("/level1", function (req, res) {
+app.get("/", function (req, res) {
   res.render("pages/level1");
 });
 
