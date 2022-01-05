@@ -42,11 +42,27 @@ app.post("/output",jsonParser,(req,res)=>{
     };	
 	
 	PythonShell.run(file, options, function (err, result){
-          if (err) throw err;
+          if (err){
+		  var responseData = {
+		  output:"error"
+	  	  } 
+	  	  const jsonContent = JSON.stringify(responseData);
+  	  	  res.end(jsonContent);
+		  return
+	  }
       	  
-	  var responseData = {
-		output:result.toString()
-	  } 
+	  try{
+	  	var responseData = {
+			output:result.toString()
+	  	}
+	  }catch(err){
+		var responseData = {
+		  output:"error"
+	  	  } 
+	  	  const jsonContent = JSON.stringify(responseData);
+  	  	  res.end(jsonContent);
+	 	  return
+	  }
 	  const jsonContent = JSON.stringify(responseData);
   	  res.end(jsonContent);
 	});
