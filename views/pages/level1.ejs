@@ -8,8 +8,8 @@
             <li class="nav-item sidebar-brand"><a class="nav-link active js-scroll-trigger" href="">DeCode</a></li>
             <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="#home">Home</a>
             </li>
-            <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="#guidelines">Input
-                Format</a></li>
+            <!-- <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="#guidelines">Input
+                Format</a></li> -->
             <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="#questions">Questions</a>
             </li>
           </ul>
@@ -20,14 +20,16 @@
       style="background-image: url('assets/img/landing.jpg');transform-origin: 492.5px 500px;">
       <div class="container my-auto text-center" style="margin: auto;height: 224px;">
         <h1 class="mb-1">DeCode</h1>
-        <h3 class="mb-5 tagline"><em>#REVERSE CODING</em></h3><a class="btn btn-primary btn-xl js-scroll-trigger"
+        <h3 class="mb-5 tagline"><em>#REVERSE CODING</em></h3>
+        <!-- <a class="btn btn-primary btn-xl js-scroll-trigger"
           role="button" href="#guidelines"
           style="padding-right: 40px;margin-right: 20px;margin-top: 5px;margin-bottom: 5px;width: 184px;transform-origin: 92px 33px;">INPUT
-          FORMAT</a><a class="btn btn-primary btn-xl js-scroll-trigger" role="button" href="#questions"
+          FORMAT</a> -->
+        <a class="btn btn-primary btn-xl js-scroll-trigger" role="button" href="#questions"
           style="margin-top: 5px;margin-bottom: 5px;margin-right: 20px;width: 184px;">QUESTIONS</a>
       </div>
     </header>
-    <section id="guidelines" class="content-section">
+    <!-- <section id="guidelines" class="content-section">
       <div class="container">
         <div class="content-section-heading text-center">
           <h2 class="mb-5">INPUT FORMAT</h2>
@@ -59,7 +61,7 @@
             </a></div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section id="questions" class="content-section bg-primary text-white">
       <div class="content-section-heading text-center">
         <h2 class="mb-5">QUESTIONS</h2>
@@ -73,8 +75,7 @@
               <h1 style="text-align: center;color: var(--bs-red);">Question 1&nbsp;</h1>
               <form>
                 <div class="md-input-group"><label class="form-label md-input-label"></label>
-                  <input id="Text1" type="number" name="textarea" placeholder="0 &le; N &le; 1000" ;
-                    class="form-control md-input">
+                  <input id="Text1" type="text" name="textarea" placeholder="String" ; class="form-control md-input">
                 </div>
                 <div class="md-input-group"><label class="form-label md-input-label" placeholder="Output"></label><input
                     id="Result1" name="TextOutput" disabled class="form-control md-input" type="text">
@@ -122,6 +123,40 @@
                 onclick="Clear(3)">CLEAR</button>
             </section>
           </div>
+          <div class="col-md-4">
+            <section class="card">
+              <h1 style="text-align: center;color: var(--bs-red);">Question 4&nbsp;</h1>
+              <form>
+                <div class="md-input-group"><label class="form-label md-input-label"></label>
+                  <input type="text" id="Text4" placeholder="String" ; class="form-control md-input">
+                </div>
+                <div class="md-input-group"><label class="form-label md-input-label"></label><input type="text"
+                    id="Result4" disabled class="form-control md-input"></div><br>
+              </form><button class="btn btn-primary d-block md-btn w-100" type="button"
+                style="background: rgb(30,153,49);border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;"
+                onclick="GetResult('Text4','Result4','l1q4')">GET RESULT</button><br>
+              <button class="btn btn-primary d-block md-btn w-100" type="button"
+                style="background: rgb(30,153,49);border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;"
+                onclick="Clear(4)">CLEAR</button>
+            </section>
+          </div>
+          <div class="col-md-4">
+            <section class="card">
+              <h1 style="text-align: center;color: var(--bs-red);">Question 5&nbsp;</h1>
+              <form>
+                <div class="md-input-group"><label class="form-label md-input-label"></label>
+                  <input type="text" id="Text5" placeholder="String" ; class="form-control md-input">
+                </div>
+                <div class="md-input-group"><label class="form-label md-input-label"></label><input type="text"
+                    id="Result3" disabled class="form-control md-input"></div><br>
+              </form><button class="btn btn-primary d-block md-btn w-100" type="button"
+                style="background: rgb(30,153,49);border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;"
+                onclick="GetResult('Text3','Result3','l1q3')">GET RESULT</button><br>
+              <button class="btn btn-primary d-block md-btn w-100" type="button"
+                style="background: rgb(30,153,49);border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;"
+                onclick="Clear(3)">CLEAR</button>
+            </section>
+          </div>
         </div>
       </div>
       <div class="container" style="text-align: center; margin-top: 2rem;">
@@ -133,9 +168,28 @@
     </section>
 
     <script>
+      function setCharAt(str, index, chr) {
+        if (index > str.length - 1) return str;
+        return str.substring(0, index) + chr + str.substring(index + 1);
+      }
+
+      function nextChar(c) {
+        let n = c.charCodeAt(0);
+        switch (n) {
+          case 90: return 'A';
+          case 122: return 'a';
+          default: return String.fromCharCode(++n);
+        }
+      }
+
       function GetResult(id, oid, a) {
         if (a === 'l1q1') {
-
+          var input = document.getElementById(id).value;
+          let str = input;
+          for (let i = 0; i < str.length; i++) {
+            str = setCharAt(str, i, nextChar(str[i]));
+          }
+          document.getElementById(oid).value = str;
         }
         else if (a === 'l1q2') {
           var input = document.getElementById(id).value;
@@ -153,8 +207,26 @@
           }
           document.getElementById(oid).value = sum;
         }
-
-
+        else if (a === 'l1q4') {
+          var input = document.getElementById(id).value;
+          let c = 0;
+          for (let i = 0; i < input.length; i++) {
+            switch (input[i]) {
+              case 'a':
+              case 'e':
+              case 'i':
+              case 'o':
+              case 'u':
+              case 'A':
+              case 'E':
+              case 'I':
+              case 'O':
+              case 'U':
+                c++;
+            }
+          }
+          document.getElementById(oid).value = c;
+        }
 
         // var data = JSON.stringify({
         //   "input": ip,
