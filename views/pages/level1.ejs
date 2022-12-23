@@ -148,7 +148,7 @@
                   <input type="text" id="Text5" placeholder="String" ; class="form-control md-input">
                 </div>
                 <div class="md-input-group"><label class="form-label md-input-label"></label><input type="text"
-                    id="Result3" disabled class="form-control md-input"></div><br>
+                    id="Result5" disabled class="form-control md-input"></div><br>
               </form><button class="btn btn-primary d-block md-btn w-100" type="button"
                 style="background: rgb(30,153,49);border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;"
                 onclick="GetResult('Text5','Result5','l1q5')">GET RESULT</button><br>
@@ -239,6 +239,7 @@
             res += n % 10;
           }
           console.log(res);
+          document.getElementById(oid).value = res;
         }
       }
 
